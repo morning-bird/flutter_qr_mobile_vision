@@ -1,6 +1,6 @@
 import 'package:flutter/widgets.dart';
 import 'package:native_device_orientation/native_device_orientation.dart';
-import 'package:qr_mobile_vision/src/preview_details.dart';
+import 'package:gmschurch_qr_mobile_vision/src/preview_details.dart';
 
 class Preview extends StatelessWidget {
   final double width, height;
@@ -26,7 +26,8 @@ class Preview extends StatelessWidget {
   Widget build(BuildContext context) {
     return NativeDeviceOrientationReader(
       builder: (context) {
-        var nativeOrientation = NativeDeviceOrientationReader.orientation(context);
+        var nativeOrientation =
+            NativeDeviceOrientationReader.orientation(context);
 
         int nativeRotation = 0;
         switch (nativeOrientation) {
@@ -55,7 +56,8 @@ class Preview extends StatelessWidget {
             break;
         }
 
-        int rotationCompensation = ((nativeRotation - sensorOrientation! + 450) % 360) ~/ 90;
+        int rotationCompensation =
+            ((nativeRotation - sensorOrientation! + 450) % 360) ~/ 90;
 
         double frameHeight = width;
         double frameWidth = height;

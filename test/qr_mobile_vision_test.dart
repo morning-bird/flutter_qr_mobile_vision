@@ -1,14 +1,16 @@
 import 'package:flutter/src/foundation/basic_types.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:plugin_platform_interface/plugin_platform_interface.dart';
-import 'package:qr_mobile_vision/qr_mobile_vision.dart';
-import 'package:qr_mobile_vision/src/preview_details.dart';
-import 'package:qr_mobile_vision/src/qr_mobile_vision_method_channel.dart';
-import 'package:qr_mobile_vision/src/qr_mobile_vision_platform_interface.dart';
+import 'package:gmschurch_qr_mobile_vision/qr_mobile_vision.dart';
+import 'package:gmschurch_qr_mobile_vision/src/preview_details.dart';
+import 'package:gmschurch_qr_mobile_vision/src/qr_mobile_vision_method_channel.dart';
+import 'package:gmschurch_qr_mobile_vision/src/qr_mobile_vision_platform_interface.dart';
 
 //ignore_for_file: avoid_print
 
-class MockQrMobileVisionPlatform with MockPlatformInterfaceMixin implements QrMobileVisionPlatform {
+class MockQrMobileVisionPlatform
+    with MockPlatformInterfaceMixin
+    implements QrMobileVisionPlatform {
   @override
   Future<void> heartbeat() async {
     return;
@@ -37,7 +39,8 @@ class MockQrMobileVisionPlatform with MockPlatformInterfaceMixin implements QrMo
 }
 
 void main() {
-  final QrMobileVisionPlatform initialPlatform = QrMobileVisionPlatform.instance;
+  final QrMobileVisionPlatform initialPlatform =
+      QrMobileVisionPlatform.instance;
 
   test('$MethodChannelQrMobileVision is the default instance', () {
     expect(initialPlatform, isInstanceOf<MethodChannelQrMobileVision>());

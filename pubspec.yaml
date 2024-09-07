@@ -1,4 +1,4 @@
-name: qr_mobile_vision
+name: gmschurch_qr_mobile_vision
 description: "Plugin for reading QR codes using Firebase's Mobile Vision API."
 version: 5.0.1
 homepage: https://github.com/morning-bird/flutter_qr_mobile_vision

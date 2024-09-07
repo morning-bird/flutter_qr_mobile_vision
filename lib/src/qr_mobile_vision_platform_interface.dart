@@ -1,9 +1,9 @@
 import 'package:flutter/widgets.dart';
 import 'package:plugin_platform_interface/plugin_platform_interface.dart';
-import 'package:qr_mobile_vision/src/barcode_formats.dart';
-import 'package:qr_mobile_vision/src/camera_direction.dart';
-import 'package:qr_mobile_vision/src/preview_details.dart';
-import 'package:qr_mobile_vision/src/qr_mobile_vision_method_channel.dart';
+import 'package:gmschurch_qr_mobile_vision/src/barcode_formats.dart';
+import 'package:gmschurch_qr_mobile_vision/src/camera_direction.dart';
+import 'package:gmschurch_qr_mobile_vision/src/preview_details.dart';
+import 'package:gmschurch_qr_mobile_vision/src/qr_mobile_vision_method_channel.dart';
 
 abstract class QrMobileVisionPlatform extends PlatformInterface {
   /// Constructs a QrMobileVisionPlatform.

@@ -1,11 +1,11 @@
 import 'package:flutter/foundation.dart';
-import 'package:qr_mobile_vision/src/barcode_formats.dart';
-import 'package:qr_mobile_vision/src/camera_direction.dart';
-import 'package:qr_mobile_vision/src/preview_details.dart';
-import 'package:qr_mobile_vision/src/qr_mobile_vision_platform_interface.dart';
+import 'package:gmschurch_qr_mobile_vision/src/barcode_formats.dart';
+import 'package:gmschurch_qr_mobile_vision/src/camera_direction.dart';
+import 'package:gmschurch_qr_mobile_vision/src/preview_details.dart';
+import 'package:gmschurch_qr_mobile_vision/src/qr_mobile_vision_platform_interface.dart';
 
-export 'package:qr_mobile_vision/src/barcode_formats.dart';
-export 'package:qr_mobile_vision/src/camera_direction.dart';
+export 'package:gmschurch_qr_mobile_vision/src/barcode_formats.dart';
+export 'package:gmschurch_qr_mobile_vision/src/camera_direction.dart';
 
 /// QR Mobile Vision wrapper allowing for convenient usage of Platform interface
 class QrMobileVision {

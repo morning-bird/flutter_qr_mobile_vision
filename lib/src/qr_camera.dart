@@ -1,12 +1,14 @@
 import 'dart:async';
 
 import 'package:flutter/widgets.dart';
-import 'package:qr_mobile_vision/qr_mobile_vision.dart';
-import 'package:qr_mobile_vision/src/preview.dart';
-import 'package:qr_mobile_vision/src/preview_details.dart';
+import 'package:gmschurch_qr_mobile_vision/qr_mobile_vision.dart';
+import 'package:gmschurch_qr_mobile_vision/src/preview.dart';
+import 'package:gmschurch_qr_mobile_vision/src/preview_details.dart';
 
-Widget _defaultNotStartedBuilder(BuildContext context) => const Text("Camera Loading ...");
-Widget _defaultOffscreenBuilder(BuildContext context) => const Text("Camera Paused ...");
+Widget _defaultNotStartedBuilder(BuildContext context) =>
+    const Text("Camera Loading ...");
+Widget _defaultOffscreenBuilder(BuildContext context) =>
+    const Text("Camera Paused ...");
 Widget _defaultOnError(BuildContext context, Object? error) {
   debugPrint("Error reading from camera: $error");
   return const Text("Error reading from camera...");
@@ -26,7 +28,8 @@ class QrCamera extends StatefulWidget {
     this.cameraDirection = CameraDirection.BACK,
     this.formats,
   })  : notStartedBuilder = notStartedBuilder ?? _defaultNotStartedBuilder,
-        offscreenBuilder = offscreenBuilder ?? notStartedBuilder ?? _defaultOffscreenBuilder,
+        offscreenBuilder =
+            offscreenBuilder ?? notStartedBuilder ?? _defaultOffscreenBuilder,
         onError = onError ?? _defaultOnError;
 
   final BoxFit fit;
@@ -135,9 +138,11 @@ class QrCameraState extends State<QrCamera> with WidgetsBindingObserver {
 
   @override
   Widget build(BuildContext context) {
-    return LayoutBuilder(builder: (BuildContext context, BoxConstraints constraints) {
+    return LayoutBuilder(
+        builder: (BuildContext context, BoxConstraints constraints) {
       if (_asyncInitOnce == null && onScreen) {
-        _asyncInitOnce = _asyncInit(constraints.maxWidth, constraints.maxHeight);
+        _asyncInitOnce =
+            _asyncInit(constraints.maxWidth, constraints.maxHeight);
       } else if (!onScreen) {
         return widget.offscreenBuilder(context);
       }

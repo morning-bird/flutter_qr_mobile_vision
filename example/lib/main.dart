@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
-import 'package:qr_mobile_vision/qr_camera.dart';
+import 'package:gmschurch_qr_mobile_vision/qr_camera.dart';
 
 void main() {
   debugPaintSizeEnabled = false;
@@ -44,7 +44,8 @@ class MyAppState extends State<MyApp> {
       appBar: AppBar(
         title: const Text('Plugin example app'),
         actions: <Widget>[
-          IconButton(icon: const Icon(Icons.light), onPressed: _swapBackLightState),
+          IconButton(
+              icon: const Icon(Icons.light), onPressed: _swapBackLightState),
         ],
       ),
       body: Center(
@@ -56,7 +57,9 @@ class MyAppState extends State<MyApp> {
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 const Text("Back"),
-                Switch(value: dirState, onChanged: (val) => setState(() => dirState = val)),
+                Switch(
+                    value: dirState,
+                    onChanged: (val) => setState(() => dirState = val)),
                 const Text("Front"),
               ],
             ),
@@ -71,7 +74,9 @@ class MyAppState extends State<MyApp> {
                               error.toString(),
                               style: const TextStyle(color: Colors.red),
                             ),
-                            cameraDirection: dirState ? CameraDirection.FRONT : CameraDirection.BACK,
+                            cameraDirection: dirState
+                                ? CameraDirection.FRONT
+                                : CameraDirection.BACK,
                             qrCodeCallback: (code) {
                               setState(() {
                                 qr = code;
