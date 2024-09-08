@@ -1,5 +1,5 @@
 Pod::Spec.new do |s|
-  s.name             = 'qr_mobile_vision'
+  s.name             = 'gmschurch_qr_mobile_vision'
   s.version          = '0.0.1'
   s.summary          = 'Plugin for reading QR codes using Firebase&#x27;s Mobile Vision API.'
   s.description      = <<-DESC
