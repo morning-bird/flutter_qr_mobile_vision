@@ -34,7 +34,7 @@ android {
 
     defaultConfig {
         applicationId "com.github.rmtmckenzie.qr_mobile_vision_example"
-        minSdkVersion 26 // flutter.minSdkVersion
+        minSdkVersion 21 // flutter.minSdkVersion
         targetSdkVersion flutter.targetSdkVersion
         versionCode flutterVersionCode.toInteger()
         versionName flutterVersionName
